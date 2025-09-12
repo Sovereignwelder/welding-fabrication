@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+    <head>
     <!-- ==== Core SEO ==== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +6,16 @@
     <meta name="description"
           content="Professional welding and custom metal fabrication for residential, commercial and industrial projects in Florida. Fast quotes, on‑site service, and 100% satisfaction.">
     <meta name="keywords"
-          content="welding, metal fabrication, Florida welders, custom metal work, pipe welding, structural welding, steel fabrication">
+          content="welding, metal fabrication, Florida welders, custom metal work, pipe welding, structural welding, steel fabrication,
+                   Pinellas welding, Pasco welding, Hillsborough welding, Manatee welding, Sarasota welding, Polk welding, Hernando welding">
     <meta name="author" content="Justin Bryan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ==== Geographic meta (helps Google & Bing) ==== -->
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="Tampa, FL" />
+    <meta name="geo.position" content="27.9475;-82.4584" />
+    <meta name="ICBM" content="27.9475, -82.4584" />
 
     <!-- ==== Canonical & Robots ==== -->
     <link rel="canonical" href="https://welding-fabrication.us/">
@@ -40,6 +45,8 @@
       "image": "https://welding-fabrication.us/media/pic1.jpg",
       "telephone": "+1-727-244-1667",
       "email": "floridawelder@duck.com",
+      "url": "https://welding-fabrication.us/",
+      "priceRange": "",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1234 Industrial Way",
@@ -48,14 +55,79 @@
         "postalCode": "33602",
         "addressCountry": "US"
       },
-      "url": "https://welding-fabrication.us/",
-      "priceRange": "",
-      "servesCuisine": "N/A",
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": "27.9475",
         "longitude": "-82.4584"
       },
+
+      <!-- ***** Area Served – counties & major cities ***** -->
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Pinellas County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "St. Petersburg"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Pasco County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "New Port Richey"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hillsborough County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Tampa"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Manatee County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Bradenton"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sarasota County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Sarasota"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Polk County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Lakeland"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hernando County",
+          "address": { "addressRegion": "FL" },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Brooksville"
+          }
+        }
+      ],
+
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -70,13 +142,6 @@
           "closes": "18:00"
         }
       ],
-      "areaServed": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "FL"
-        }
-      },
       "sameAs": [
         "https://www.facebook.com/yourpage",
         "https://www.instagram.com/yourprofile"
@@ -84,83 +149,113 @@
     }
     </script>
 
+    <!-- ==== Services Structured Data (each service as a Service) ==== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Structural Welding",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Justin Bryan Welding & Fabrication"
+      },
+      "areaServed": [
+        "Pinellas County",
+        "Pasco County",
+        "Hillsborough County",
+        "Manatee County",
+        "Sarasota County",
+        "Polk County",
+        "Hernando County"
+      ],
+      "description": "Beams, columns, and load‑bearing frames for residential, commercial and industrial projects."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Pipe & Tubing Welding",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Justin Bryan Welding & Fabrication"
+      },
+      "areaServed": [
+        "Pinellas County",
+        "Pasco County",
+        "Hillsborough County",
+        "Manatee County",
+        "Sarasota County",
+        "Polk County",
+        "Hernando County"
+      ],
+      "description": "Industrial, residential and marine pipe & tubing welding."
+    }
+    </script>
+
+    <!-- ==== Breadcrumbs (helps Google understand site hierarchy) ==== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://welding-fabrication.us/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://welding-fabrication.us/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contact",
+          "item": "https://welding-fabrication.us/#contact"
+        }
+      ]
+    }
+    </script>
+
+    <!-- ==== FAQ (optional but great for SERP features) ==== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide on‑site welding in Pinellas County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes – we travel throughout Pinellas, Pasco, Hillsborough, Manatee, Sarasota, Polk and Hernando counties for on‑site repairs and installations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can I get a quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We typically respond within 24 hours. Use the form below or call 727‑244‑1667 for an immediate estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Justin Bryan Welding & Fabrication is fully licensed, bonded and carries comprehensive liability insurance."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- ==== Styles ==== -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<header class="hero">
-    <div class="hero__content">
-        <h1>Florida’s Premier Welding & Fabrication</h1>
-        <p>Custom metal work, on‑site repairs, and fast quotes for homes, businesses, and industry.</p>
-        <a href="#contact" class="cta-btn">Get a Free Quote</a>
-    </div>
-</header>
-
-<main>
-    <!-- ==== Gallery ==== -->
-    <section class="gallery">
-        <h2>Our Work</h2>
-        <div class="gallery__grid">
-            <img src="media/pic1.jpg" alt="Stainless steel railing fabricated for a residential balcony in Tampa, FL">
-            <img src="media/pic2.jpg" alt="Heavy‑duty pipe welding for a commercial HVAC system in Orlando, FL">
-            <img src="media/pic3.jpg" alt="Custom steel staircase installed at a Florida beachfront property">
-        </div>
-    </section>
-
-    <!-- ==== Services ==== -->
-    <section class="services">
-        <h2>What We Do</h2>
-        <ul class="service-list">
-            <li><strong>Structural Welding</strong> – beams, columns, and load‑bearing frames.</li>
-            <li><strong>Pipe & Tubing</strong> – industrial, residential, and marine applications.</li>
-            <li><strong>Custom Fabrication</strong> – railings, staircases, enclosures, and prototypes.</li>
-            <li><strong>On‑Site Repairs</strong> – emergency fixes, maintenance, and upgrades.</li>
-            <li><strong>Design Consultation</strong> – CAD drawings, material selection, and cost estimates.</li>
-        </ul>
-    </section>
-
-    <!-- ==== Contact Form ==== -->
-    <section id="contact" class="contact">
-        <h2>Request a Quote</h2>
-        <form id="leadForm" novalidate>
-            <div class="form-row">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your full name">
-            </div>
-
-            <div class="form-row">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required placeholder="e.g. 727‑555‑1234">
-            </div>
-
-            <div class="form-row">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="you@example.com">
-            </div>
-
-            <div class="form-row">
-                <label for="company">Company (optional)</label>
-                <input type="text" id="company" name="company" placeholder="Your business name">
-            </div>
-
-            <div class="form-row">
-                <label for="message">Project Details</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Brief description of the work you need"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Request</button>
-        </form>
-        <p class="contact-note">
-            Prefer to call? <strong>Justin Bryan</strong> – <a href="tel:+17272441667">727‑244‑1667</a>
-        </p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; <span id="year"></span> Justin Bryan Welding & Fabrication – Serving all of Florida.</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
