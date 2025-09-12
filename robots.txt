@@ -1,8 +1,5 @@
-Create robots.txt at the root.
-
-`txt
+txt
 User-agent: *
 Allow: /
 
 Sitemap: https://welding-fabrication.us/sitemap.xml
-`
